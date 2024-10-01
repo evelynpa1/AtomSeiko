@@ -4,4 +4,3 @@ To ensure compatibility and proper functionality, please use the following versi
 
 **Unity Version:** 2022.3.48f1
 
-Thank you for your cooperation!
