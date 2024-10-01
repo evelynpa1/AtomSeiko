@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FruitCombiner : MonoBehaviour
 {
     private int _layerIndex;
 
     private FruitInfo _info;
+    public static int lastMerged;
 
     private void Awake()
     {
         _info = GetComponent<FruitInfo>();
         _layerIndex = gameObject.layer;
+        lastMerged = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,6 +44,8 @@ public class FruitCombiner : MonoBehaviour
                             Vector3 middlePosition = (transform.position + collision.transform.position) / 2f;
                             GameObject go = Instantiate(SpawnCombinedFruit(_info.FruitIndex), GameManager.instance.transform);
                             go.transform.position = middlePosition;
+                            lastMerged = _info.FruitIndex+1;
+                            FunFact.instance.UpdateText();
 
                             ColliderInformer informer = go.GetComponent<ColliderInformer>();
                             if (informer != null)

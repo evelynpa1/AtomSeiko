@@ -4,20 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class HowToPlay : MonoBehaviour
 {
-    public Button mainMenu;
+    public Button howToPlay;
     // Start is called before the first frame update
     void Start()
     {
-        if (mainMenu != null) {
-            mainMenu.onClick.AddListener(OnButtonClick);
+        if (howToPlay != null) {
+            howToPlay.onClick.AddListener(OnButtonClick);
         }
     }
 
     // Update is called once per frame
     void OnButtonClick()
     {
-        SceneManager.LoadScene("MainMenuPublic");
+        SceneManager.LoadScene("HowToPlay");
     }
 }

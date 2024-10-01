@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FruitIndex: 6
-  PointsWhenAnnihilated: 28
+  PointsWhenAnnihilated: 42
   FruitMass: 1.2
 --- !u!114 &5861418953630895992
 MonoBehaviour:
